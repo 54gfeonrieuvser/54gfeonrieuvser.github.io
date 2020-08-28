@@ -43,6 +43,7 @@ section .key_vision{
     border:0px solid red;
     display:flex;
     flex-flow:row nowrap;
+    height:70vh;
 }
 
 .key_vision img{
