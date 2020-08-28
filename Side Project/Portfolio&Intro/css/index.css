@@ -1,0 +1,68 @@
+/* default setting */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+.wrapper{
+    width:80%;
+    margin:0 auto;
+    background-color:#fff;
+}
+
+/* header */
+header nav{
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    margin-top:3rem;
+    border-bottom: 2px solid black;
+}
+header nav a{
+    background-color:black;
+    color: white;
+    display:block;
+    font-size:5rem;
+    text-decoration: none;
+    margin:0 5rem 1rem;
+    padding:1rem;
+    border: 0px solid red;
+}
+header nav a:hover{
+    background-color: #999;
+    color:red;
+    opacity:0.5;
+    transition:500ms;
+}
+
+/* key vision , would add some js effect in future*/
+section .key_vision{
+    margin:0 auto;
+    width:90%;
+    border:0px solid red;
+    display:flex;
+    flex-flow:row nowrap;
+}
+
+.key_vision img{
+    width:35%;
+    margin:2rem 0rem 0;
+    border:0px solid blue;
+}
+
+.key_vision p{
+    width:30%;
+    border:0px solid green;
+    font-size:4rem;
+    padding:15rem 1rem;
+   
+    text-align:center;
+    
+}
+.LF{
+    font-size:6rem;
+}
+
+/* articles about me */
+
