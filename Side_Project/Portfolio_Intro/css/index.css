@@ -6,9 +6,9 @@
 }
 
 .wrapper{
-    width:80%;
+    width:90%;
     margin:0 auto;
-    background-color:#fff;
+    
 }
 
 /* header */
@@ -50,18 +50,25 @@ section .key_vision{
     margin:2rem 0rem 0;
     border:0px solid blue;
 }
-
-.key_vision p{
-    width:30%;
+.slogan{
+    width:26%;
+    margin:0 2%;
     border:0px solid green;
-    font-size:4rem;
-    padding:15rem 1rem;
-   
     text-align:center;
-    
+}
+.slogan h1{
+    font-size: 6rem;
+    padding-top:5rem;
+    border:0px solid blue;
+}
+.key_vision p{
+    font-size:3rem;
+    padding:0rem 1rem;
+    margin:2rem 0;
+    border:0px solid red;
 }
 .LF{
-    font-size:6rem;
+    font-size:4.5rem;
 }
 
 /* articles about me */
