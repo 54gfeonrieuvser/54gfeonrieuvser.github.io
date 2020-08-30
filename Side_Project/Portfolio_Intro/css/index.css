@@ -18,6 +18,7 @@ header nav{
     justify-content: center;
     margin-top:3rem;
     border-bottom: 2px solid black;
+    height:15vh;
 }
 header nav a{
     background-color:black;
@@ -44,11 +45,12 @@ section .key_vision{
     display:flex;
     flex-flow:row nowrap;
     height:70vh;
+    margin-bottom:15vh;
 }
 
 .key_vision img{
-    width:35%;
-    margin:2rem 0rem 0;
+    width:35%; 
+    margin:2rem 0;
     border:0px solid blue;
 }
 .slogan{
@@ -73,4 +75,11 @@ section .key_vision{
 }
 
 /* articles about me */
+
+.Intro h3{
+    font-size:4rem;
+}
+.Intro p{
+    font-size:2rem;
+}
 
