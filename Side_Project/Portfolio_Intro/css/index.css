@@ -27,6 +27,7 @@ header nav a{
     font-size:5rem;
     text-decoration: none;
     margin:0 5rem 1rem;
+    margin-left:6.5rem;
     padding:1rem;
     border: 0px solid red;
 }
@@ -39,7 +40,7 @@ header nav a:hover{
 
 /* key vision , would add some js effect in future*/
 section .key_vision{
-    margin:0 auto;
+    margin:2rem auto 0;
     width:90%;
     border:0px solid red;
     display:flex;
@@ -51,7 +52,7 @@ section .key_vision{
 .key_vision img{
     width:35%; 
     margin:2rem 0;
-    border:0px solid blue;
+    border:2px solid blue;
 }
 .slogan{
     width:26%;
@@ -74,12 +75,84 @@ section .key_vision{
     font-size:4.5rem;
 }
 
-/* articles about me */
+/* page layout*/
+
+.intropage{
+    width:90%;
+    border:3px solid red;
+    margin:0 auto;
+}
+
+
+.page_1{
+    display:flex;
+    flex-flow:row nowrap;
+}
+.page_2{
+    display:flex;
+    flex-flow:row nowrap;
+}
+.page_3{
+    display:flex;
+    flex-flow:row nowrap;
+}
+.Intro{
+    padding:1rem 4rem;
+    border:3px solid blue;
+}
+.cate{
+    padding-top:3rem;
+    border:0px solid blue;
+}
+.Background{
+    padding:3rem 4rem 4rem 1rem;
+    border:0px solid blue;
+}
+.Hobbies{
+    padding:1rem 4rem;
+}
+
+/* font settings */
+.intropage h2{
+    font-size:6rem;
+    text-align: center;
+    border:3px solid lightseagreen;
+}
 
 .Intro h3{
-    font-size:4rem;
+    text-align:right;
+    background-color:purple;
+    font-size:3rem;
+    margin-top:2rem;
+    margin-bottom:1.5rem;
 }
 .Intro p{
     font-size:2rem;
+    background-color:yellow;
+}
+.cate p{
+    font-weight: 900;
+    font-size: 1.5rem;
+    display:block;
+    text-align:center;
+    margin-top:2rem;
+    text-decoration-line:underline;
+   
+}
+.Background p{
+    font-size: 1.5rem;
+    margin-top:2rem;
+}
+.Hobbies p{
+    font-size: 2rem;
+    margin-top:2rem;
+}
+
+#lb{
+    margin-top:9.5rem;
+    border:0px solid red;
+}
+#lb2{
+    margin-top:5.5rem;
 }
 
