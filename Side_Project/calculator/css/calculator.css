@@ -10,6 +10,15 @@
     margin:25vh auto;
     background-color: #000000;
 }
+button{
+    border: none;
+    background: none;
+    height: 100%;
+    color: black;
+    letter-spacing: 1px;
+    font-size: inherit;
+    transition: all 0.3s;
+}
 .screen{
     color:white;
     text-align:right;
@@ -23,6 +32,7 @@
     flex-flow:row nowrap;
     border:0px solid red;
     justify-content:space-between;;  
+    font-size:0;
 }
 .calc-button{
     background-color: #d8d9db;
@@ -52,7 +62,7 @@
     background-color: #dd8d37;
 }
 .double{
-    flex-basis:49.8%;
+    flex-basis:49.73%;
 }
 .triple{
     flex-basis:74.87%;
