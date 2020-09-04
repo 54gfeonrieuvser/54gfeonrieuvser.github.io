@@ -6,7 +6,7 @@
 }
 
 .wrapper{
-    width:90%;
+    width:80%;
     margin:0 auto;
     
 }
@@ -29,19 +29,19 @@ header nav a{
     margin:0 5rem 1rem;
     margin-left:6.5rem;
     padding:1rem;
-    border: 0px solid red;
+    border-radius:3px;
 }
 header nav a:hover{
-    background-color: #999;
-    color:red;
-    opacity:0.5;
-    transition:500ms;
+    background-color: #aaa;
+    color:black;
+    opacity:1;
+    transition:300ms;
 }
 
 /* key vision , would add some js effect in future*/
 section .key_vision{
     margin:2rem auto 0;
-    width:90%;
+    width:80%;
     border:0px solid red;
     display:flex;
     flex-flow:row nowrap;
@@ -52,7 +52,8 @@ section .key_vision{
 .key_vision img{
     width:35%; 
     margin:2rem 0;
-    border:2px solid blue;
+    border:0px solid blue;
+    border-radius:5px;
 }
 .slogan{
     width:26%;
