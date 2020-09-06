@@ -38,10 +38,12 @@ header nav a:hover{
     transition:300ms;
 }
 
-/* key vision , would add some js effect in future*/
+/* key vision , would add some js effect later*/
+
 section .key_vision{
     margin:2rem auto 0;
     width:80%;
+    text-decoration:none;
     border:0px solid red;
     display:flex;
     flex-flow:row nowrap;
@@ -130,6 +132,8 @@ section .key_vision{
 .Intro p{
     font-size:2rem;
     background-color:yellow;
+    text-align:justify;
+    padding:0.5rem 0.5rem 0;
 }
 .cate p{
     font-weight: 900;
