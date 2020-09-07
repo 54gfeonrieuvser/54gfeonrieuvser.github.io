@@ -6,7 +6,7 @@
 }
 
 .wrapper{
-    width:80%;
+    width:100%;
     margin:0 auto;
     
 }
@@ -15,22 +15,23 @@
 header nav{
     display:flex;
     flex-flow:row nowrap;
-    justify-content: center;
-    margin-top:3rem;
-    border-bottom: 2px solid black;
-    height:15vh;
+    margin-top:1rem;
+    border-bottom: 3px solid black;
+ 
 }
 header nav a{
     background-color:black;
     color: white;
-    display:block;
+    flex-basis:23.333%;
+    letter-spacing:7px;
     font-size:5rem;
     text-decoration: none;
-    margin:0 5rem 1rem;
-    margin-left:6.5rem;
-    padding:1rem;
+    margin:20px 5%;
+    padding:1rem 1.5rem;
     border-radius:3px;
+    text-align:center;
 }
+
 header nav a:hover{
     background-color: #aaa;
     color:black;
@@ -41,27 +42,33 @@ header nav a:hover{
 /* key vision , would add some js effect later*/
 
 section .key_vision{
-    margin:2rem auto 0;
-    width:80%;
+  
     text-decoration:none;
     border:0px solid red;
     display:flex;
     flex-flow:row nowrap;
-    height:70vh;
-    margin-bottom:15vh;
+    margin-top:5vh ;
+    margin-bottom:10vh ;
 }
 
 .key_vision img{
-    width:35%; 
-    margin:2rem 0;
+    width:28.3333%;
+    height:60vh;
     border:0px solid blue;
     border-radius:5px;
+    margin:0 5%;
+}
+#img1{
+    box-shadow: -5px 5px 5px;
+}
+#img2{
+    box-shadow: 5px 5px 5px;
 }
 .slogan{
-    width:26%;
-    margin:0 2%;
+    width:23.333%;
     border:0px solid green;
     text-align:center;
+   
 }
 .slogan h1{
     font-size: 6rem;
@@ -71,7 +78,7 @@ section .key_vision{
 .key_vision p{
     font-size:3rem;
     padding:0rem 1rem;
-    margin:2rem 0;
+    margin:3rem 0;
     border:0px solid red;
 }
 .LF{
