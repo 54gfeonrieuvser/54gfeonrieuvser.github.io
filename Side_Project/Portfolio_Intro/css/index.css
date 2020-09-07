@@ -6,7 +6,7 @@
 }
 
 .wrapper{
-    width:100%;
+    width:90%;
     margin:0 auto;
     
 }
@@ -15,22 +15,30 @@
 header nav{
     display:flex;
     flex-flow:row nowrap;
-    margin-top:1rem;
     border-bottom: 3px solid black;
  
 }
 header nav a{
     background-color:black;
     color: white;
-    flex-basis:23.333%;
+    flex-basis:25.92%;
     letter-spacing:7px;
     font-size:5rem;
     text-decoration: none;
-    margin:20px 5%;
+    margin:7vh 5.55555% 3vh;
     padding:1rem 1.5rem;
     border-radius:3px;
     text-align:center;
 }
+#fhead{
+    border:0px solid red;
+    margin-left:0;
+}
+#lhead{
+    border:0px solid red;
+    margin-right:0;
+}
+
 
 header nav a:hover{
     background-color: #aaa;
