@@ -10,12 +10,15 @@
     margin:0 auto;
     
 }
-
+body{
+    /* background-image: url(../img/Mark\ Thomson\ \(@_mark_thomson\)\ •\ Instagram\ photos\ and\ videos.jpg); */
+}
 /* header */
 header nav{
     display:flex;
     flex-flow:row nowrap;
     border-bottom: 3px solid black;
+    text-transform: uppercase;
  
 }
 header nav a{
@@ -23,7 +26,7 @@ header nav a{
     color: white;
     flex-basis:25.92%;
     letter-spacing:7px;
-    font-size:5rem;
+    font-size:3rem;
     text-decoration: none;
     margin:7vh 5.55555% 3vh;
     padding:1rem 1.5rem;
