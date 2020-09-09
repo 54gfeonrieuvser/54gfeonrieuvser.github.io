@@ -179,3 +179,20 @@ section .key_vision{
     margin-top:5.5rem;
 }
 
+
+#portfolio{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 30% 30% 30%; 
+    text-align:center;
+}
+article{
+    border:3px solid red;
+    background-image: url(../img/port1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#portfolio p{
+    display:block;
+    font-size: 3rem;
+}
