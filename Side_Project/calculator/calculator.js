@@ -93,8 +93,8 @@ function addstring(num) {
         }else if (operator ==='none'){
         total = parseInt(screen.innerHTML);
     }
-        // console.log('total =');
-        // console.log(total); 
+        console.log('total =');
+        console.log(total); 
 }
 
 //for number input
