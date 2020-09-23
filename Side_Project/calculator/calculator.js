@@ -4,6 +4,7 @@ let operator = 'none';
 const screen = document.querySelector('.screen');
 
 function plus() {
+    console.log("+");
     if(operator !== 'none'){
         buffer = total.toString();
         screen.innerHTML = '0';
@@ -15,6 +16,7 @@ function plus() {
     operator = '+';
 }
 function minus() {   
+    console.log("-");
     if(operator !== 'none'){
     buffer = total.toString();
     screen.innerHTML = '0';
@@ -31,6 +33,7 @@ function minus() {
 }
 
 function multiply() {
+    console.log("*");
     if(operator !== 'none'){
         buffer = total.toString();
         screen.innerHTML = '0';
@@ -43,6 +46,7 @@ function multiply() {
 }
 
 function divided_by() {
+    console.log("/");
     if(operator !== 'none'){
         buffer = total.toString();
         screen.innerHTML = '0';
@@ -55,11 +59,13 @@ function divided_by() {
 }
 
 function equal() {
+    console.log("=");
     screen.innerHTML = total.toString();
     operator ==='none';
 }
 
 function back() {
+    console.log("back");
     if( screen.innerHTML.length == 1){
         screen.innerHTML = '0';
         return;
@@ -68,10 +74,10 @@ function back() {
 }
 
 function init() {
+    console.log('clear');
     total = 0;
     buffer = '';
     operator = 'none';
-    console.log('clear');
     screen.innerHTML = '0';
 }
 
