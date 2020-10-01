@@ -1,7 +1,52 @@
+// rwd size setup
+$desktop_rwd:1025px;
+$tablet_rwd:1024px;
+$mobile_rwd:767px;
 
-
-*,*::after, *::before{
+$header_desktop: 180px;
+$header_tablet: 180px;
+$header_mobile: 120px;
+*, *::after, *::before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+header{
+    background-color: #555;
+    display:grid;
+    grid-template-columns: 420px auto 420px;
+    img{
+      
+        background-color: #999;
+    }
+    nav{
+        
+        ul{
+         
+            li{
+                list-style-type: none;
+            }
+        }
+    }
+    div{
+        background-color: #999;
+        a{
+            button{
+                display:block;
+            }
+        }
+    }
+
+
+
+    @media screen and (min-width:$header_desktop){
+        height:$header_desktop;
+       }
+    @media screen and (max-width:$header_tablet){
+     height:$header_tablet;
+    }
+    @media screen and (max-width:$header_mobile){
+        height:$header_mobile;
+       }
 }

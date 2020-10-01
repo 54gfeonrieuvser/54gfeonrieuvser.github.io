@@ -4,4 +4,46 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+header {
+  background-color: #555;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 420px auto 420px;
+      grid-template-columns: 420px auto 420px;
+}
+
+header img {
+  background-color: #999;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header div {
+  background-color: #999;
+}
+
+header div a button {
+  display: block;
+}
+
+@media screen and (min-width: 180px) {
+  header {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 180px) {
+  header {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 120px) {
+  header {
+    height: 120px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
