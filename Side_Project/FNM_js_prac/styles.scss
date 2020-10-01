@@ -49,6 +49,10 @@
             background-color: #f0f;
             color:#0f0;
         }
+        &:disabled{
+            background-color: #666;
+            color:black;
+        }
     }
   
 }
