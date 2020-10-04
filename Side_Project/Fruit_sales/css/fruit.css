@@ -7,40 +7,35 @@
   font-family: 微軟正黑體;
 }
 
-body {
-  height: 250vh;
-}
-
-header {
+#main_vision {
   width: 100%;
   height: 100vh;
-  border: none;
   text-align: center;
   background-image: url(../img/header.jpg);
   background-size: cover;
+  background-color: white;
   color: white;
 }
 
-header h1 {
-  font-size: 3.5rem;
-  font-weight: 900;
-  padding: 25vh 0 0;
-  letter-spacing: 9px;
-}
-
-header p {
+#main_vision div h1 {
   font-size: 1.5rem;
   font-weight: 300;
   margin: 0 0 0.5vh;
   letter-spacing: 3px;
 }
 
-header i {
-  font-size: 7rem;
-  font-family: serif;
+#main_vision div h1 strong {
+  font-size: 3.5rem;
+  font-weight: 900;
+  padding: 25vh 0 0;
+  letter-spacing: 9px;
 }
 
-header #navbutton {
+#main_vision div i {
+  font-size: 7rem;
+}
+
+#main_vision div #navbuttons {
   width: 350px;
   height: 50px;
   margin: 5vh auto;
@@ -51,11 +46,11 @@ header #navbutton {
   grid-gap: 10px;
 }
 
-header #navbutton .button {
+#main_vision div #navbuttons .button {
   border: 1px solid white;
 }
 
-header #navbutton .button a {
+#main_vision div #navbuttons .button a {
   display: block;
   line-height: 50px;
   text-decoration: none;
@@ -64,11 +59,11 @@ header #navbutton .button a {
           backdrop-filter: brightness(0.2);
 }
 
-header #navbutton .button a:visited {
+#main_vision div #navbuttons .button a:visited {
   color: white;
 }
 
-header #navbutton .button a:hover {
+#main_vision div #navbuttons .button a:hover {
   background-color: yellow;
   color: black;
   -webkit-transition: 0.3s;
