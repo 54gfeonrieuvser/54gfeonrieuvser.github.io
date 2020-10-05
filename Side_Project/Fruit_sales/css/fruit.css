@@ -7,67 +7,123 @@
   font-family: 微軟正黑體;
 }
 
+.align_handler {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
 #main_vision {
   width: 100%;
   height: 100vh;
-  text-align: center;
   background-image: url(../img/header.jpg);
   background-size: cover;
   background-color: white;
   color: white;
 }
 
+#main_vision div {
+  -webkit-backdrop-filter: brightness(60%);
+          backdrop-filter: brightness(60%);
+}
+
 #main_vision div h1 {
   font-size: 1.5rem;
   font-weight: 300;
-  margin: 0 0 0.5vh;
   letter-spacing: 3px;
+  padding: 10px;
 }
 
 #main_vision div h1 strong {
   font-size: 3.5rem;
   font-weight: 900;
-  padding: 25vh 0 0;
   letter-spacing: 9px;
+}
+
+@media screen and (max-width: 767px) {
+  #main_vision div h1 strong {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #main_vision div h1 {
+    font-size: 14px;
+  }
 }
 
 #main_vision div i {
   font-size: 7rem;
 }
 
-#main_vision div #navbuttons {
-  width: 350px;
-  height: 50px;
-  margin: 5vh auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
+@media screen and (max-width: 767px) {
+  #main_vision div i {
+    font-size: 48px;
+  }
 }
 
-#main_vision div #navbuttons .button {
+#main_vision div #navbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  grid-gap: 15px;
+}
+
+#main_vision div #navbuttons div {
+  width: 170px;
   border: 1px solid white;
 }
 
-#main_vision div #navbuttons .button a {
+#main_vision div #navbuttons div a {
   display: block;
-  line-height: 50px;
   text-decoration: none;
-  font-size: 1.2rem;
-  -webkit-backdrop-filter: brightness(0.2);
-          backdrop-filter: brightness(0.2);
-}
-
-#main_vision div #navbuttons .button a:visited {
   color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
 }
 
-#main_vision div #navbuttons .button a:hover {
+#main_vision div #navbuttons div a:hover {
+  border: none;
   background-color: yellow;
   color: black;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 767px) {
+  #main_vision div #navbuttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  border: 3px solid red;
 }
 
 .about {
@@ -104,7 +160,6 @@
 }
 
 .about .features .feature {
-  border: 3px solid red;
   height: 300px;
   width: 400px;
 }

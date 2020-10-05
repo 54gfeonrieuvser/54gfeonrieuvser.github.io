@@ -1,4 +1,7 @@
-$borderT: 3px solid red;
+$borderR: 3px solid red;
+$borderB: 3px solid blue;
+$borderG: 3px solid green;
+$borderY: 3px solid yellow;
 
 $Fz_Title: 7rem;
 $Fz_heading: 3.5rem;
@@ -19,68 +22,97 @@ $spacingL: 9px;
 // default settings
 
 @mixin Button {
-    height: 50px;
     width: 170px;
-}
+    border:1px solid white;
+    border-radius:1px;
+        a{  
+            display:block;
+            text-decoration: none;
+            color:white;
+            font-size: $Fz_button;
+            text-align:center;
+            padding:10px;
+        }
+        a:hover{
+            border:none;
+            background-color: yellow;
+            color:black;
+            transition:0.3s;
+        }
+        @media screen and (max-width:767px){
+            width:150px;
+            a{
+                font-size: 1rem;
+                padding:5px;
+            }
+        }
 
 @mixin Navbutton {
+
 }
 
 @mixin Feature {
 }
 //button_type
 
+.align_handler{
+    display:flex;
+    flex-flow:column nowrap;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
 #main_vision {
     width: 100%;
     height: 100vh;
-    text-align: center;
     background-image: url(../img/header.jpg);
     background-size: cover;
     background-color: white;
     color: white;
     div {
+        backdrop-filter:brightness(60%);
         h1 {
             strong {
                 font-size: $Fz_heading;
                 font-weight: 900;
-                padding: 25vh 0 0;
                 letter-spacing: $spacingL;
+                @media screen and (max-width:767px){
+                    font-size: 24px;
+                }
             }
             font-size: 1.5rem;
             font-weight: 300;
-            margin: 0 0 0.5vh;
             letter-spacing: $spacingN;
+            padding:10px;
+            @media screen and (max-width:767px){
+                font-size: 14px;
+            }
         }
         i {
             font-size: $Fz_Title;
-        }
-        #navbuttons {
-            width: 350px;
-            height: 50px;
-            margin: 5vh auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-            .button {
-                border: 1px solid white;
-                a {
-                    display: block;
-                    line-height: 50px;
-                    text-decoration: none;
-                    font-size: $Fz_button;
-                    backdrop-filter: brightness(0.2);
-                    &:visited {
-                        color: white;
-                    }
-                    &:hover {
-                        background-color: yellow;
-                        color: black;
-                        transition: 0.3s;
-                    }
-                }
+            @media screen and (max-width:767px){
+                font-size: 48px;
             }
         }
+        #navbuttons {
+            display:flex;
+            flex-flow:row nowrap;
+            grid-gap:15px;
+            div{
+                @include Button;
+            }
+           @media screen and (max-width: 767px){
+               flex-direction: column;
+           } 
+            
+        }
     }
+}
+header{
+    display:flex;
+    flex-flow:row nowrap;
+    border:$borderR;
 }
 // handle header
 
@@ -107,7 +139,7 @@ $spacingL: 9px;
         flex-flow: row nowrap;
         justify-content: center;
         .feature {
-            border: $borderT;
+            // border: $borderT;
             height: 300px;
             width: 400px;
         }
