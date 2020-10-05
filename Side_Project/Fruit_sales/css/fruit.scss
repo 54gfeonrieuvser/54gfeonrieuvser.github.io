@@ -46,6 +46,8 @@ $spacingL: 9px;
                 padding:5px;
             }
         }
+    
+}
 
 @mixin Navbutton {
 
@@ -55,13 +57,6 @@ $spacingL: 9px;
 }
 //button_type
 
-.align_handler{
-    display:flex;
-    flex-flow:column nowrap;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
 
 #main_vision {
     width: 100%;
@@ -70,7 +65,13 @@ $spacingL: 9px;
     background-size: cover;
     background-color: white;
     color: white;
-    div {
+    .align_handler {
+        display:flex;
+        flex-flow:column nowrap;
+        grid-gap:1rem;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
         backdrop-filter:brightness(60%);
         h1 {
             strong {
@@ -78,13 +79,12 @@ $spacingL: 9px;
                 font-weight: 900;
                 letter-spacing: $spacingL;
                 @media screen and (max-width:767px){
-                    font-size: 24px;
+                    font-size: 30px;
                 }
             }
             font-size: 1.5rem;
             font-weight: 300;
             letter-spacing: $spacingN;
-            padding:10px;
             @media screen and (max-width:767px){
                 font-size: 14px;
             }
