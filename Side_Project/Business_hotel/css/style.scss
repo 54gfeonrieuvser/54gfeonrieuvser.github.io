@@ -6,47 +6,131 @@ $mobile_rwd:767px;
 $header_desktop: 180px;
 $header_tablet: 180px;
 $header_mobile: 120px;
+
+$borderR: 3px solid red;
+$borderB: 3px solid blue;
+$borderG: 3px solid green;
+
+$grayscale0:#000000;
+$grayscale1:#222222;
+$grayscale2:#444444;
+$grayscale3:#666666;
+$grayscale4:#888888;
+$grayscale5:#aaaaaa;
+$grayscale6:#cccccc;
 *, *::after, *::before{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+@mixin nav_button{
+    @media screen and (min-width: $desktop_rwd){
+        width:120;
+        height:120px;
+    }
+    @media screen and (max-width: $tablet_rwd){
+        width:120;
+        height:120px;
+    }
+    @media screen and (max-width: $mobile_rwd){
+    }
+}
+
+@mixin burger{
+    @media screen and (min-width: $desktop_rwd){
+        display: none;
+    }
+    @media screen and (max-width: $tablet_rwd){
+        width: 120px;
+        height: 120px;
+    }
+    @media screen and (max-width: $mobile_rwd){
+
+    }
+}
+
+//init
+
 header{
-    background-color: #555;
+    // position: fixed;
+    width:100%;
+    background-color: $grayscale5;
     display:grid;
-    grid-template-columns: 420px auto 420px;
-    img{
-      
-        background-color: #999;
+    @media screen and (min-width:$desktop_rwd){
+        height:$header_desktop;
+        grid-template-columns: 1fr 3fr 1fr;
+       }
+       
+    @media screen and (max-width:$tablet_rwd){
+        height:$header_tablet;
+        grid-template-columns: 250px auto 180px;
+       }
+    @media screen and (max-width:$mobile_rwd){
+        height:$header_mobile;
+        grid-template-columns: 145px auto 120px;
+        }
+    div{
+        img{
+            display:block;
+            background-color: $grayscale4;
+            width:250px;
+            margin:0 auto;
+            height:100%;
+            // border:$borderB;
+        }
+        // border:$borderR;
+        background-color: $grayscale3;
     }
     nav{
-        
+        width:925px;
+        height:120px;
+        // border:$borderB;
+        margin:30px auto;
+        background-color: $grayscale3;
         ul{
-         
+            height:100%;
+            // border:$borderG;
+            display:flex;
+            flex-flow:row nowrap;
             li{
+                flex-basis:20%;
+              
                 list-style-type: none;
+                // border:$borderR;
+                a{
+                    // border:$borderR;
+                    line-height:120px;
+                    display:block;
+                    text-align:center;
+                    font-size:3rem;
+                    color:white;
+                    text-decoration: none;
+                    &:hover{
+                        color:black;
+                        background-color: #fff;
+                    }
+                }
             }
         }
     }
     div{
-        background-color: #999;
-        a{
-            button{
+        background-color: $grayscale3;
+        button{
+            // @include 
+            a{
                 display:block;
             }
         }
     }
 
-
-
-    @media screen and (min-width:$header_desktop){
-        height:$header_desktop;
-       }
-    @media screen and (max-width:$header_tablet){
-     height:$header_tablet;
-    }
-    @media screen and (max-width:$header_mobile){
-        height:$header_mobile;
-       }
+}
+body{
+    height:150vh;
+    // border:$borderR;
+}
+.main_vision{
+    background-color: $grayscale6;
+   height:100vh; 
+//    border:$borderB;
 }
