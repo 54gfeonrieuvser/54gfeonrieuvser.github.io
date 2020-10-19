@@ -1,0 +1,53 @@
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: orangered;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+    h1{
+        color:white;
+        font-size: 1.5rem;
+        padding:50px;
+        // border :3px solid red;
+    }
+    select{
+        margin:3rem;
+    
+    }
+}
+body{
+    background-color: #eee;
+}
+
+#load{
+    display:block;
+    margin:150px auto 0;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    width:200px;
+    height:200px;
+    // background-color: red;
+}
+#Imgdemo{
+    display:block;
+    margin:150px auto 0;
+    width:650px;
+    height:450px;
+    // background-color: red;
+}

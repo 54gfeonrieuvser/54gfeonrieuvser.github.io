@@ -1,0 +1,72 @@
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  background-color: orangered;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.5rem;
+  padding: 50px;
+}
+
+header select {
+  margin: 3rem;
+}
+
+body {
+  background-color: #eee;
+}
+
+#load {
+  display: block;
+  margin: 150px auto 0;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  width: 200px;
+  height: 200px;
+}
+
+#Imgdemo {
+  display: block;
+  margin: 150px auto 0;
+  width: 650px;
+  height: 450px;
+}
+/*# sourceMappingURL=style.css.map */
