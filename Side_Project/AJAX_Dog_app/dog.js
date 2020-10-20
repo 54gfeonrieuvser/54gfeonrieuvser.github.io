@@ -8,9 +8,10 @@ fetch(Breeds_URL)
     return response.json();
 })
 .then(function (data) {
+
     const breedsObject = data.message;
     const breedsArray = Object.keys(breedsObject);
-    // console.log(breedsArray);
+
     for(let i = 0; i < breedsArray.length; i++){
         const option = document.createElement('option');
         option.value = breedsArray[i];
@@ -33,8 +34,9 @@ select.addEventListener("change", function(event) {
         const random = Math.floor(Math.random()* data.message.length);
         // setTimeout(defaultAnime, 3000);
         demo.src = data.message[random];
-        load();
-    })
+
+        setTimeout(load, 2000);
+    });
     // demo.src = ;
     // console.log(`https://dog.ceo/api/breed/${event.target.value}/images/random`);
     
@@ -42,6 +44,10 @@ select.addEventListener("change", function(event) {
     // console.log(``);
 
 })
+    demo.addEventListener("load", function(){
+        // demo.style.display = "none";
+        console.log("wait");
+    });
 
 function defaultAnime(){
     demo.src='./img/loading.png';
@@ -51,6 +57,7 @@ function defaultAnime(){
 }
 
 function load(){
+
     demo.style.display = "block";
     demo.style.animation = "none";
     demo.style.width = "30%";

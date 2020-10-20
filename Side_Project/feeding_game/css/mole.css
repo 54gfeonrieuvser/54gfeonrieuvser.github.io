@@ -1,0 +1,54 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url("../img/background.png");
+  background-color: #c0c86d;
+  cursor: url("../img/cursor.png"), default;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
+#wormbar {
+  text-align: center;
+  visibility: hidden;
+}
+
+#Moleground {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-column-gap: 100px;
+  grid-row-gap: 5px;
+}
+
+#Moleground .hole {
+  background-color: #000;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+#Moleground .hole img {
+  display: inline;
+}
+
+.space {
+  visibility: hidden;
+}
+/*# sourceMappingURL=mole.css.map */
