@@ -7,47 +7,43 @@
 
 body{
     background-image: url("../img/background.png");
+    background-size: cover;
     background-color: #c0c86d;
     cursor: url("../img/cursor.png"), default; 
     background-repeat: no-repeat;
-
-    padding: 0;
-    margin: 0;
-    height:100vh;
 }
 #wormbar{
     text-align:center;
-    visibility:hidden;
+    // visibility:hidden;
 }
 
 #Moleground{
-
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
     align-items: center;
-    // flex-basis:20%;
-    grid-column-gap:100px;
+
+    grid-column-gap:150px;
     grid-row-gap:5px;
-  
+
     .hole{
-        // width:25%;
         background-color: #000;
         border-radius:50%;
-        // height:267px;
-        // width:267px;
-        // border:3px solid red;
+        height:267px;
+        width:267px;
         overflow:visible;
-        // display:block;
-        // text-align:center;
+
         img{
-            display:inline;
-            // border:3px solid green;
-           
+            display:block;
+            transform: translateX(-30px);
         }
     }
 }
 
 .space{
     visibility: hidden;
+}
+
+.hungry{
+    cursor:url(../img/cursor-worm.png), default;
 }

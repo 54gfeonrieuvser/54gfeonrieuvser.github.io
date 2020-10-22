@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feed moles dumb game</title>
     <link rel="stylesheet" href="./css/mole.css">
 </head>
+
 <body>
-    <div id="wormbar"><img src="./img/worm.png" alt="scorebar"></div>
-    <div id="Moleground">
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole space"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole"><img src="./img/mole-hungry.png" alt="mole"></div>
-        <div class="hole space"><img src="./img/mole-hungry.png" alt="mole"></div>
+    <div id="body">
+        <div id="wormbar"><img src="./img/worm.png" alt="scorebar"></div>
+        <div id="Moleground">
+            <div class="hole"><img src="./img/mole-hungry.png" class="mole" data-index="0" alt="mole"></div>
+            <div class="hole"><img src="./img/mole-sad.png" class="mole" data-index="1" alt="mole"></div>
+            <div class="hole"><img src="./img/mole-leaving.png" class="mole" data-index="2" alt="mole"></div>
+            <div class="hole"><img src="./img/mole-fed.png" class="mole" data-index="3" alt="mole"></div>
+            <div class="hole"><img src="./img/king-mole-hungry.png" class="mole " data-index="4" alt="mole"></div>
+            <div class="hole"><img src="./img/king-mole-sad.png" class="mole" data-index="5" alt="mole"></div>
+            <div class="hole"><img src="./img/king-mole-leaving.png" class="mole" data-index="6" alt="mole"></div>
+            <div class="hole"><img src="./img/king-mole-fed.png" class="mole" data-index="7" alt="mole"></div>
+            <!-- <div class="hole space"><img src="./img/mole-hungry.png" class = "mole" data-index="-1"alt="mole"></div> -->
+            <div class="hole"><img src="./img/mole-hungry.png" class="mole" data-index="8" alt="mole"></div>
+            <div class="hole"><img src="./img/king-mole-hungry.png" class="mole" data-index="9" alt="mole"></div>
+            <!-- <div class="hole space"><img src="./img/mole-hungry.png" class = "mole" data-index="-1"alt="mole"></div> -->
+        </div>
     </div>
+    <script src="mole.js"></script>
 </body>
+
 </html>

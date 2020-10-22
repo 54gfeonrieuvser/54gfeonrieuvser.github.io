@@ -7,17 +7,14 @@
 
 body {
   background-image: url("../img/background.png");
+  background-size: cover;
   background-color: #c0c86d;
   cursor: url("../img/cursor.png"), default;
   background-repeat: no-repeat;
-  padding: 0;
-  margin: 0;
-  height: 100vh;
 }
 
 #wormbar {
   text-align: center;
-  visibility: hidden;
 }
 
 #Moleground {
@@ -34,21 +31,29 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-column-gap: 100px;
+  grid-column-gap: 150px;
   grid-row-gap: 5px;
 }
 
 #Moleground .hole {
   background-color: #000;
   border-radius: 50%;
+  height: 267px;
+  width: 267px;
   overflow: visible;
 }
 
 #Moleground .hole img {
-  display: inline;
+  display: block;
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
 }
 
 .space {
   visibility: hidden;
+}
+
+.hungry {
+  cursor: url(../img/cursor-worm.png), default;
 }
 /*# sourceMappingURL=mole.css.map */
