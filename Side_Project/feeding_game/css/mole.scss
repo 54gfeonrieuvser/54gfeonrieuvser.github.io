@@ -12,9 +12,21 @@ body{
     cursor: url("../img/cursor.png"), default; 
     background-repeat: no-repeat;
 }
+#Hidebox{
+    overflow:hidden;
+    width:5%;
+    transition:1s;
+}
+
 #wormbar{
-    text-align:center;
-    // visibility:hidden;
+    display:block;
+    margin:0 auto;
+    // border: 3px solid green;
+    position:relative;
+    z-index:-5;
+    // img{
+    //     border:3px solid red;
+    // }
 }
 
 #Moleground{
@@ -36,12 +48,9 @@ body{
         img{
             display:block;
             transform: translateX(-30px);
+    
         }
     }
-}
-
-.space{
-    visibility: hidden;
 }
 
 .hungry{

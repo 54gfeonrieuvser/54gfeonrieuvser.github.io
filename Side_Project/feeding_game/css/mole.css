@@ -13,8 +13,18 @@ body {
   background-repeat: no-repeat;
 }
 
+#Hidebox {
+  overflow: hidden;
+  width: 5%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 #wormbar {
-  text-align: center;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: -5;
 }
 
 #Moleground {
@@ -47,10 +57,6 @@ body {
   display: block;
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
-}
-
-.space {
-  visibility: hidden;
 }
 
 .hungry {
