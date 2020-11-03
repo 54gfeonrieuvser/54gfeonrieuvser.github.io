@@ -8,14 +8,11 @@ const ground = document.querySelector("#Moleground");
 
 let score = 0;
 
-//count current score
+//count current score & set ending
 function Scoredisplay(add) {
     score += add;
     const per = "0%";
-    // console.log(score.toString());
-    
     document.querySelector("#Hidebox").style.width = score.toString().concat(per);
-    // console.log(`now Score: ${score}`);
     if (score > 9) {
         winGame();
     }
@@ -34,34 +31,27 @@ function winGame() {
 function AppearSelection() {
 
     let choose = Math.floor((Math.random() * Math.floor(10)));
-    // console.log(`select:one ${choose}`);
     if (moles[choose].dataset.select == "1") {
         choose = AppearSelection();
     }
     moles[choose].dataset.select = "1";
     return choose;
 }
-
 //set default
 function init() {
     for (let i = 0; i < moles.length; i++) {
-        // console.log(moles[i].dataset.index);
         moles[i].src = "./img/king-mole-leaving.png";
     }
     document.querySelector("#body").addEventListener("click", feed);
     setTimeout(disappear, 500);
 };
-
 function disappear() {
     for (let i = 0; i < moles.length; i++) {
         moles[i].style.display = "none";
     }
 };
-
-//what  mole react
-
+//what  mole act in the game
 function showcase() {
-
     return function () {
         const Holeindex = AppearSelection();
         moles[Holeindex].dataset.fed = "0";
@@ -77,24 +67,15 @@ function showcase() {
         } else {
             moles[Holeindex].src = "./img/mole-hungry.png";
         }
-
-        setTimeout(sad(Holeindex), 2000);
-
+        setTimeout(sad(Holeindex), 1000);
     }
 }
 
 function feed() {
-    if (event.target.tagName !== "IMG" || event.target.dataset.select =="0") {
+    if (event.target.tagName !== "IMG") {
         return;
     }
-    // console.log("fedd");
-    let Holeindex;
-    for (i = 1; i < moles.length; i++) {
-        if (moles[i].dataset.select == "1") {
-            Holeindex = i;
-            // console.log("find");
-        }
-    }
+    let Holeindex = parseInt(event.target.dataset.index); 
     holes[Holeindex].classList.remove("hungry");
     holes[Holeindex].dataset.fed = "1";
  
@@ -114,8 +95,6 @@ function sad(Holeindex) {
     return function () {
         if (moles[Holeindex].dataset.fed == "1") {
             return;
-        } else {
-            // console.log("I'm sad");
         }
         moles[Holeindex].classList.remove("hungry");
         if (moles[Holeindex].dataset.king == "1") {
@@ -133,7 +112,7 @@ function butt(Holeindex) {
         } else {
             moles[Holeindex].src = "./img/mole-leaving.png";
         }
-        setTimeout(leave(Holeindex), 3500);
+        setTimeout(leave(Holeindex), 5000);
     }
 };
 
@@ -143,7 +122,6 @@ function leave(Holeindex) {
         moles[Holeindex].dataset.select = "0";
         moles[Holeindex].dataset.fed = "0";
         moles[Holeindex].dataset.king = "0";
-        // holes[Holeindex].removeEventListener("click", happy(Holeindex, isKing));
     }
 };
 
@@ -151,7 +129,3 @@ function leave(Holeindex) {
 let gameprocess = setInterval(showcase(), 1000);
 
 setTimeout(init, 1500);
-
-// setInterval(function check(){
-//     Scoredisplay(score);
-// }, 1000)

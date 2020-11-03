@@ -34,9 +34,9 @@ body{
     flex-flow:row wrap;
     justify-content: center;
     align-items: center;
-
+    // border:3px solid red;
     grid-column-gap:150px;
-    grid-row-gap:5px;
+    grid-row-gap:50px;
 
     .hole{
         background-color: #000;
@@ -52,7 +52,10 @@ body{
         }
     }
 }
-
+.hole{
+    margin-right:50px;
+    // border:solid 3px red;
+}
 .hungry{
     cursor:url(../img/cursor-worm.png), default;
 }

@@ -42,7 +42,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   grid-column-gap: 150px;
-  grid-row-gap: 5px;
+  grid-row-gap: 50px;
 }
 
 #Moleground .hole {
@@ -57,6 +57,10 @@ body {
   display: block;
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
+}
+
+.hole {
+  margin-right: 50px;
 }
 
 .hungry {
