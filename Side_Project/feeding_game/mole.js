@@ -44,6 +44,7 @@ function init() {
     }
     document.querySelector("#body").addEventListener("click", feed);
     setTimeout(disappear, 500);
+    let gameprocess = setInterval(showcase(), 1000);
 };
 function disappear() {
     for (let i = 0; i < moles.length; i++) {
@@ -57,7 +58,7 @@ function showcase() {
         moles[Holeindex].dataset.fed = "0";
         moles[Holeindex].style.display = "block";
         holes[Holeindex].classList.add("hungry");
-        console.log(`it's Hole ${Holeindex} now!`);
+        // console.log(`it's Hole ${Holeindex} now!`);
         const isKing = Math.floor((Math.random() * Math.floor(5)) / 4);
         if (isKing) {
             moles[Holeindex].dataset.king = "1";
@@ -67,7 +68,7 @@ function showcase() {
         } else {
             moles[Holeindex].src = "./img/mole-hungry.png";
         }
-        setTimeout(sad(Holeindex), 1000);
+        setTimeout(sad(Holeindex), 2000);
     }
 }
 
@@ -75,9 +76,10 @@ function feed() {
     if (event.target.tagName !== "IMG") {
         return;
     }
+    clearTimeout(sad);
     let Holeindex = parseInt(event.target.dataset.index); 
     holes[Holeindex].classList.remove("hungry");
-    holes[Holeindex].dataset.fed = "1";
+    moles[Holeindex].dataset.fed = "1";
  
     if( moles[Holeindex].dataset.king == "1"){
         moles[Holeindex].src = "./img/king-mole-fed.png";
@@ -87,7 +89,7 @@ function feed() {
         Scoredisplay(1);
     }
 
-    setTimeout(butt(Holeindex), 500);
+    setTimeout(butt(Holeindex), 3000);
 }
 
 
@@ -96,13 +98,14 @@ function sad(Holeindex) {
         if (moles[Holeindex].dataset.fed == "1") {
             return;
         }
-        moles[Holeindex].classList.remove("hungry");
+        // console.log("no fed");
+        holes[Holeindex].classList.remove("hungry");
         if (moles[Holeindex].dataset.king == "1") {
             moles[Holeindex].src = "./img/king-mole-sad.png";
         } else {
             moles[Holeindex].src = "./img/mole-sad.png";
         }
-        setTimeout(butt(Holeindex, 3000));
+        setTimeout(butt(Holeindex, 2000));
     }
 };
 function butt(Holeindex) {
@@ -112,7 +115,7 @@ function butt(Holeindex) {
         } else {
             moles[Holeindex].src = "./img/mole-leaving.png";
         }
-        setTimeout(leave(Holeindex), 5000);
+        setTimeout(leave(Holeindex), 3000);
     }
 };
 
@@ -126,6 +129,5 @@ function leave(Holeindex) {
 };
 
 
-let gameprocess = setInterval(showcase(), 1000);
 
 setTimeout(init, 1500);
