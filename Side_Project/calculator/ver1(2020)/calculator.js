@@ -99,6 +99,7 @@ function addstring(num) {
         }else if (operator ==='none'){
         total = parseInt(screen.innerHTML);
     }
+   
         console.log('total =');
         console.log(total); 
 }
@@ -113,9 +114,7 @@ document.getElementById('divide').addEventListener('click', divided_by);
 document.getElementById('multiply').addEventListener('click', multiply);
 document.getElementById('minus').addEventListener('click', minus);
 document.getElementById('plus').addEventListener('click', plus);
-
 document.getElementById('equal').addEventListener('click', equal);
-
 document.getElementById('back').addEventListener('click', back);
 document.getElementById('clear').addEventListener('click', init);
 

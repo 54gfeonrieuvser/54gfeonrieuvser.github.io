@@ -1,0 +1,102 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+.wrapper {
+    width: 400px;
+    height: 600px;
+    margin:0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    font-weight:600;
+}
+
+.screen{
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    text-align: right;
+    color: white;
+    font-size: 40px;
+    border:0px solid green;
+    font-family: monospace;
+}
+
+.calc-buttons{
+    background-color: #d8d9db;
+   
+}
+
+#calc-buttons{
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.last-col-button{
+    background-color: #df974c;
+    color: white;
+}
+
+.one-col-button, .two-col-button, .three-col-button{
+    height: 100px;
+    font-size: 40px;
+    text-align: center;
+    border:2px solid black;
+}
+
+#calc-buttons tr th:not(.last-col-button):hover, #calc-buttons tr td:not(.last-col-button):hover{
+    background-color:  #ebebeb;
+}
+#calc-buttons tr th:not(.last-col-button):active, #calc-buttons tr td:not(.last-col-button):active{
+    background-color:  #bbbcbe;
+}
+.last-col-button:hover{
+    background-color: #dfb07e;
+}
+.last-col-button:active{
+    background-color: #dd8d37;
+}
+
+.one-col-button{
+    /*min-width: 100px;
+    max-width: 100px;*/
+    width:100px;
+}
+.two-col-button{
+    width: 200px;
+}
+.three-col-button{
+     width: 300px;
+}
+
+#calc-buttons tr th:first-child, #calc-buttons tr td:first-child{
+    border-left: none;
+}
+#calc-buttons tr th:last-child, #calc-buttons tr td:last-child{
+    border-right: none;
+}
+#calc-buttons tr:first-child th{
+    border-top: none;
+}
+#calc-buttons tr:last-child td{
+    border-bottom: none;
+}
+/* using inert button tag
+button{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}*/
+.test{
+    border:0px solid red;
+    line-height: 100px;
+    padding:5px 20px 0 0;
+}   

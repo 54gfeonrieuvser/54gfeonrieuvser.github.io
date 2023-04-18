@@ -1,8 +1,7 @@
 *, *::after, *::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,7 +15,6 @@ body {
 #Hidebox {
   overflow: hidden;
   width: 5%;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 
@@ -28,23 +26,13 @@ body {
 }
 
 #Moleground {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
   grid-column-gap: 150px;
   grid-row-gap: 50px;
 }
-
 #Moleground .hole {
   background-color: #000;
   border-radius: 50%;
@@ -52,11 +40,9 @@ body {
   width: 267px;
   overflow: visible;
 }
-
 #Moleground .hole img {
   display: block;
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
+  transform: translateX(-30px);
 }
 
 .hole {
@@ -65,5 +51,4 @@ body {
 
 .hungry {
   cursor: url(../img/cursor-worm.png), default;
-}
-/*# sourceMappingURL=mole.css.map */
+}/*# sourceMappingURL=mole.css.map */
