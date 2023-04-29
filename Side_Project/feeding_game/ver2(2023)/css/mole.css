@@ -1,0 +1,77 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url("../images/cursor.png"), auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.bg-container {
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 1920px;
+  height: 120vh;
+}
+.bg-container .counter-container {
+  height: 150px;
+  width: 1920px;
+  /*        position: relative; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0px solid red;
+}
+.bg-container .counter-container .counter-wrapper {
+  margin-left: 1920px -1660px/2px;
+  width: 1660px;
+  height: 150px;
+}
+.bg-container .counter-container .counter-wrapper .score-fill {
+  top: 0;
+  height: 100%;
+  width: 83px;
+  max-width: 1660px;
+  background-image: url("../images/worm.png");
+  background-repeat: no-repeat;
+  transition: width 2s ease;
+  border: 0px solid blue;
+}
+.bg-container .hole-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 20px 100px;
+  width: 1920px;
+  margin: 0 auto;
+  border: black solid 0px;
+}
+.bg-container .hole-container .hole {
+  height: 240px;
+  width: 240px;
+  margin-left: 70px;
+  background-color: black;
+  border-radius: 133px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bg-container .hole-container .hole .mole {
+  height: 267px;
+  width: 334px;
+  display: inline-block;
+}
+.bg-container .hole-container .hole.empty {
+  visibility: hidden;
+}/*# sourceMappingURL=mole.css.map */
