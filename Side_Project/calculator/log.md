@@ -1,4 +1,4 @@
-<h1>Version log for Calculator</h2>
+<h1>Version log for Calculator</h1>
 
 <h2>ver1</h2> 
 
@@ -10,5 +10,5 @@
 
 [demo here](54gfeonrieuvser.github.io/Side_Project/calculator/ver2(2023)/)
 1. the border issues had been fixed in this version. 
-2. the DOM selecting is not ideal, in 16 different lines, not clean at all 
+2. the DOM selecting is not ideal, in 16 different lines, not clean at all. 
 3. still not implement backward completely, probably require rebuliding the whole program flows.
