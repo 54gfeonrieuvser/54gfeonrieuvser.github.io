@@ -1,0 +1,560 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Sedgwick Ave Display", cursive;
+  /* 
+  @keyframes chaBg {
+      from {
+          background-image: url("../images/大頭貼.png");
+      }
+
+      to {
+          background-image: none;
+
+      }
+  } */
+  /* custome fade-in  animation for nav links*/
+}
+body #backToTopAnchor {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(20, 163, 140);
+  border-radius: 50px;
+  right: 40px;
+  bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #backToTopAnchor a {
+  font-size: 3rem;
+  color: white;
+}
+body #backToTopAnchor a:link {
+  text-decoration: none;
+}
+body #backToTopAnchor a:hover {
+  text-decoration: underline;
+}
+body header {
+  height: 100vh;
+  background-image: url("../images/首頁背景.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body header > nav {
+  height: 10vh;
+}
+body header > nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  margin: 0;
+  list-style-type: none;
+}
+body header > nav ul li {
+  margin-right: 4rem;
+  padding: 5px;
+}
+body header > nav ul li:last-child {
+  margin-right: 10rem;
+}
+body header > nav ul li a {
+  font-size: 2.5rem;
+  display: block;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: black;
+  /* create animations for links */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+}
+body header > nav ul li a:link {
+  text-decoration: none;
+}
+body header > nav ul li a:visited {
+  text-decoration: none;
+}
+body header > nav ul li a:hover {
+  text-decoration: underline;
+}
+body header > nav ul li a:active {
+  text-decoration: none;
+}
+body .intro {
+  position: relative;
+  height: 110vh;
+}
+body .intro::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(237, 237, 234);
+  background-image: url("../images/水族箱-removebg.png");
+  background-position: center;
+  background-size: 2100px 1500px;
+  background-repeat: no-repeat;
+  filter: blur(5px);
+  z-index: -1;
+}
+body .intro h2 {
+  margin: 0;
+  padding: 4rem 0 0;
+  text-align: center;
+  font-size: 6rem;
+}
+body .intro .intro-wrapper {
+  /*   background-color:#00b4ff; */
+  display: flex;
+  flex-flow: row nowrap;
+}
+body .intro .intro-wrapper .introCard {
+  /*       border: 3px solid red; */
+  flex-basis: 50%;
+  padding: 120px 4.5rem;
+  font-size: 3.5rem;
+  perspective: 1000px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body .intro .intro-wrapper .introCard .cardFlip {
+  width: 600px;
+  height: 600px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+  background-image: url("../images/大頭貼.png");
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+body .intro .intro-wrapper .introCard .cardFlip .cardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+body .intro .intro-wrapper .introCard .cardFlip .frontCard {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body .intro .intro-wrapper .introCard .cardFlip .frontCard h3 {
+  font-size: 4.5rem;
+  color: #fff;
+  font-style: italic;
+  letter-spacing: -8px;
+  word-spacing: -8px;
+}
+body .intro .intro-wrapper .introCard .cardFlip .frontCard span {
+  word-spacing: normal;
+  letter-spacing: normal;
+  display: inline-block;
+  opacity: 0;
+}
+body .intro .intro-wrapper .introCard .cardFlip .backCard {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #D1913C;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFD194, #D1913C);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body .intro .intro-wrapper .introCard .cardFlip .backCard .brief p:first-child {
+  text-align: center;
+  font-size: 4.5rem;
+  padding: 3rem;
+  margin: 0;
+  color: #000;
+  letter-spacing: 0px;
+}
+body .intro .intro-wrapper .introCard .cardFlip .backCard .brief p:last-child {
+  margin: 0;
+  padding: 2rem;
+  word-spacing: 8px;
+}
+body .intro .intro-wrapper .introCard .isFlipped {
+  transform: rotateY(180deg);
+}
+body .intro .intro-wrapper .introCard .isFlipped .backCard .brief p {
+  opacity: 0;
+}
+body .intro .intro-wrapper .introCard .cardFlip.backHovered .backCard .brief p:first-child {
+  animation: fadeInCard ease 3s;
+  animation-delay: 1000;
+  animation-fill-mode: forwards;
+}
+body .intro .intro-wrapper .introCard .cardFlip.backHovered .backCard .brief p:last-child {
+  animation: fadeInCard ease 5s;
+  animation-delay: 6000;
+  animation-fill-mode: forwards;
+}
+body .intro .intro-wrapper .introCard .cardFlip.backNotHovered .backCard .brief p:first-child {
+  animation: fadeOutCard ease 1s;
+  animation-fill-mode: forwards;
+}
+body .intro .intro-wrapper .introCard .cardFlip.backNotHovered .backCard .brief p:last-child {
+  animation: fadeOutCard ease 1s;
+  animation-fill-mode: forwards;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard {
+  animation-name: bgBlur;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span {
+  animation-name: cross-fade-blur;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(1) {
+  animation-delay: 0.04s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(2) {
+  animation-delay: 0.08s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(3) {
+  animation-delay: 0.12s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(4) {
+  animation-delay: 0.16s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(6) {
+  animation-delay: 0.24s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(7) {
+  animation-delay: 0.28s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(8) {
+  animation-delay: 0.32s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(9) {
+  animation-delay: 0.36s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(10) {
+  animation-delay: 0.4s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(11) {
+  animation-delay: 0.44s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(12) {
+  animation-delay: 0.48s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(13) {
+  animation-delay: 0.52s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontHovered .frontCard > h3 > span:nth-child(14) {
+  animation-delay: 0.56s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard {
+  animation-name: bgBlur-back;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span {
+  animation-name: cross-fade-blur-back;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(1) {
+  animation-delay: 0.04s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(2) {
+  animation-delay: 0.08s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(3) {
+  animation-delay: 0.12s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(4) {
+  animation-delay: 0.16s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(5) {
+  animation-delay: 0.2s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(6) {
+  animation-delay: 0.24s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(7) {
+  animation-delay: 0.28s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(8) {
+  animation-delay: 0.32s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(9) {
+  animation-delay: 0.36s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(10) {
+  animation-delay: 0.4s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(11) {
+  animation-delay: 0.44s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(12) {
+  animation-delay: 0.48s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(13) {
+  animation-delay: 0.52s;
+}
+body .intro .intro-wrapper .introCard .cardFlip.frontNotHovered .frontCard > h2 > span:nth-child(14) {
+  animation-delay: 0.56s;
+}
+body .intro .intro-wrapper .introCarousel {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  margin-right: 3rem;
+}
+body .intro .intro-wrapper .introCarousel .swiper {
+  width: 900px;
+  height: 600px;
+  border: 0px solid green;
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide .slide-container {
+  height: 60%;
+  max-width: 600px;
+  padding: 100px 100px;
+  text-align: left;
+  border-radius: 80%;
+  transition: filter 0.3s ease-in-out;
+  background-size: cover;
+  position: relative;
+  box-shadow: 3px 3px 10px 3px #888;
+  border: 0px solid red;
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide .slide-container h3 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 800;
+  position: relative;
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide .slide-container p {
+  font-size: 2rem;
+  line-height: 3rem;
+  position: relative;
+  font-weight: 600;
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide .slide-01 {
+  background-image: url("../images/ocean-01.jpg");
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide .slide-02 {
+  background-image: url("../images/ocean-02.jpg");
+  color: #fff;
+}
+body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide .slide-03 {
+  background-image: url("../images/ocean-03.jpg");
+}
+body section .container {
+  background: #007991;
+  background: linear-gradient(to right, #78ffd6, #007991);
+  padding: 2rem;
+  padding-bottom: 0px;
+  margin: 0 auto;
+  max-width: 800px;
+  min-height: 60vh;
+}
+body section .container .top-section {
+  text-align: center;
+  padding: 4rem 0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+body section .container .top-section h3 {
+  font-size: 3.5rem;
+  letter-spacing: 0.8rem;
+}
+body section .container .top-section p {
+  font-size: 2rem;
+}
+body section .container .timeline {
+  position: relative;
+  min-height: 150px;
+}
+body section .container .timeline .line {
+  position: absolute;
+  z-index: 2;
+  left: calc(50% - 1px);
+  width: 2px;
+  top: -70px;
+  bottom: -50px;
+  background-color: #000;
+}
+body section .container .timeline .line:before,
+body section .container .timeline .line:after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #000;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body section .container .timeline .line:after {
+  bottom: 0;
+}
+body section .container .timeline .section {
+  display: flex;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 600ms ease;
+  position: relative;
+  z-index: 1;
+  margin: 0px 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+  min-height: 300px;
+}
+body section .container .timeline .section .bead {
+  position: absolute;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background-color: #000;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+}
+body section .container .timeline .section .content {
+  width: calc(50% - 2rem);
+}
+body section .container .timeline .section:nth-child(odd) {
+  flex-direction: row-reverse;
+  transform: translateX(100%);
+}
+body section .container .timeline .section.show-me:nth-child(n) {
+  opacity: 1;
+  transform: none;
+}
+body footer {
+  text-align: center;
+  color: white;
+  background-color: #000;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body footer ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+body footer ul li img {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    top: 10px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutCard {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes bgBlur {
+  from {
+    backdrop-filter: blur(0rem);
+    -webkit-backdrop-filter: blur(0rem);
+  }
+  to {
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+  }
+}
+@keyframes bgBlur-back {
+  from {
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
+  }
+  to {
+    backdrop-filter: blur(0rem);
+    -webkit-backdrop-filter: blur(0rem);
+  }
+}
+@keyframes cross-fade-blur {
+  0% {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translate3d(0, 3rem, 0) rotate3d(0.25, -1, 0, 66.6deg);
+  }
+  20%, 100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes cross-fade-blur-back {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate3d(0, 0, 0);
+  }
+  20%, 100% {
+    opacity: 0;
+    filter: blur(1rem);
+    transform: translate3d(0, -3rem, 0) rotate3d(-0.25, 1, 0, 66.6deg);
+  }
+}
+body .disabled {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

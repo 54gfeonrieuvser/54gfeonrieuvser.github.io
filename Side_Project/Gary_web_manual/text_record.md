@@ -1,0 +1,4 @@
+&nbsp; Try to build a Personal page looking manually, adding some random API, wasting time resolving the conflicts among the collections.
+I think it'd be a good stopping point at Day 10, try to get familiar with frameworks, web deployment and back to rebuild this project.
+
+&nbsp;The Layout and font choice isn't appropriate because of my lazyness, the same as the typography and color set up. It should be another learning road-map through the design part, mainly focus on the use of Figma(from my currently experience from learning react, the component logic). I'd keep both path open and improving non-stop 

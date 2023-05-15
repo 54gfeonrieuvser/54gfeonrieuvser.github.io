@@ -1,0 +1,115 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+body #backToTopAnchor {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(20, 163, 140);
+  border-radius: 50px;
+  right: 40px;
+  bottom: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #backToTopAnchor a {
+  font-size: 3rem;
+  color: white;
+}
+body #backToTopAnchor a:link {
+  text-decoration: none;
+}
+body #backToTopAnchor a:hover {
+  text-decoration: underline;
+}
+body header {
+  height: 100vh;
+  background-image: url("../images/首頁背景.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+body header > nav {
+  flex-basis: 75%;
+  height: 10vh;
+}
+body header > nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  margin: 0;
+}
+body header > nav ul li {
+  margin-right: 4rem;
+  padding: 5px;
+}
+body header > nav ul li:last-child {
+  margin-right: 10rem;
+}
+body header > nav ul li a {
+  font-size: 2.5rem;
+  display: block;
+  font-family: "Sedgwick Ave Display", cursive;
+  color: black;
+  /* create animations for links */
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  position: relative;
+}
+body header > nav ul li a:link {
+  text-decoration: none;
+}
+body header > nav ul li a:visited {
+  text-decoration: none;
+}
+body header > nav ul li a:hover {
+  text-decoration: underline;
+}
+body header > nav ul li a:active {
+  text-decoration: none;
+}
+body .demo.first h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 4rem;
+  height: 20vh;
+  margin: 0;
+  padding: 0;
+  line-height: 20vh;
+  border: 0px solid green;
+}
+body .demo.first .swiper {
+  border: 0px solid red;
+  height: 800px;
+}
+body .demo.first .swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .demo.first .swiper .swiper-slide img {
+  max-width: 1440px;
+  max-height: 840px;
+}
+body .demo.second {
+  height: 100vh;
+  border: 3px solid black;
+}
+
+.disabled {
+  display: none;
+}/*# sourceMappingURL=portfolio.css.map */
