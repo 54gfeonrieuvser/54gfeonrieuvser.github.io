@@ -16,7 +16,7 @@ useEffect(() => {
   // This function will be called after every render and when dependencies change
 }, [dependency1, dependency2]);
 ```
-### useContext
+## useContext
 
 - The `useContext` hook allows React developers to follow the "single source of truth" principle and avoid props drilling.
 - It consists of two parts: the context provider and the context consumer.
@@ -37,12 +37,14 @@ useEffect(() => {
 #### Example
 
 
-### Step 1: createContext
+#### Step 1: createContext
 To create a context object, use the `createContext()` function:
 ```jsx
 // Create the context object
 const MyContext = createContext();
 ```
+
+
 #### Step 2: Context.Provider
 To provide the context value to components, use the context provider:
 ```jsx
@@ -62,7 +64,85 @@ const contextValue = useContext(MyContext);
 -   **Avoid Overusing Context**: Use context for global state or data that needs to be accessed by multiple components, but avoid overusing it for every piece of data in your application.
 -   **Performance Considerations**: Optimize performance by memoizing the context value or using memoization techniques like `useMemo` when the context value changes frequently.
 -   **Testing Considerations**: Provide a suitable context value for testing components that use `useContext` by mocking or providing a mock context value.
-
+- 
 ## Firebase
-Create account, project and Register as Web Application, step by step.
-step 1: npm install firebase, Create Configuration file and copypaste the settings from project Configuration.
+
+To learn how to implement Firebase in your React.js app, follow these steps:
+
+### Step 1: Create Firebase Account and Project
+
+-   Create an account on Firebase.
+-   Set up a new project.
+
+### Step 2: Register as Web Application and Install Firebase
+
+-   Register your app as a Web Application within the Firebase project.
+-   Install Firebase in your project using the command `npm install firebase`.
+-   Create a configuration file and copy-paste the settings from the project configuration in Firebase.
+
+### Step 3: Set up Firestore Database and Add Handler Functions
+
+Implement the following functions within the Firestore SDK:
+
+```javascript 
+writeDoc: (...args) => {
+    const [inputs, collection_name] = args;
+    return new Promise(async resolve => {
+        const randomIndex = Math.floor(Math.random() * 100000000);
+        try {
+            const docRef = doc(db, "stocks", `${randomIndex}`);
+            await setDoc(docRef, {
+                title: inputs.title,
+                path: inputs.path,
+                createAt: serverTimestamp()
+            });
+            resolve("New document inserted successfully!");
+        } catch (e) {
+            // Handle error
+        }
+    });
+}
+readDocs: (...args) => {
+    const [collection_name] = args;
+    let docs = [];
+    const ref = collection(db, collection_name);
+    return new Promise(async resolve => {
+        try {
+            const snapshots = await getDocs(ref);
+            snapshots.forEach(doc => {
+                const d = { ...doc.data() };
+                docs.push(d);
+            });
+            resolve(docs);
+        } catch (e) {
+            console.log(e);
+        }
+    });
+}`` 
+```
+### Step 4: Perform Database Operations
+```javascript
+readDocs("stocks").then(console.log);
+writeDoc(inputs, "stocks").then(console.log);` 
+```
+## .env Variables
+
+To securely store sensitive information or configuration settings in your React.js app, you can use environment variables with a `.env` file. Here's how you can set it up:
+
+1.  Create a `.env` file in the root directory of your project.
+2.  Add the `.env` file to your `.gitignore` file to ensure it's not committed to version control, keeping your sensitive information secure.
+
+In your `.env` file, define your environment variables with the `REACT_APP_` prefix. For example:
+
+`REACT_APP_API_KEY=veryImportantInfo` 
+
+To access these static variables within your React components, you can use `process.env.REACT_APP_` followed by the variable name. For instance, to access the API key defined above, you would use:
+
+`const apiKey = process.env.REACT_APP_API_KEY;//veryImportantInfo` 
+
+Remember that the `REACT_APP_` prefix is required for the environment variables to be recognized in your React app.
+
+By using environment variables and the `.env` file, you can keep sensitive information separate from your codebase and easily manage different configurations for different environments (e.g., development, production).
+
+Please note that you'll need to restart your development server (e.g., using `npm start`) for the changes in the `.env` file to take effect.
+

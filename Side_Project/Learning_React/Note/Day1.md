@@ -18,26 +18,6 @@ const [varName, setVarName] = useState(initialValue);
 - To update the value of varName, you can use setVarName(newValue).
 
 ### useReducer
-# Learning React.js Day1
-## Basic Hooks in React
-
-### useState
-
-- `useState` is a basic hook that allows developers to manage state within functional components.
-- It returns a stateful value and a function to update that value.
-- You can assign simple structured objects to state variables.
-
-#### Example
-```javascript
-const [varName, setVarName] = useState(initialValue);
-```
-- In the above example, varName is the state variable that holds the current value.
-- initialValue is the initial value of the state variable.
-- setVarName is the function that can be used to update the value of varName.
-- To access the value of varName, you can use {varName} in your JSX code.
-- To update the value of varName, you can use setVarName(newValue).
-
-### useReducer
 
 - `useReducer` is another hook that is used for managing more complex state and state transitions.
 - It takes in a reducer function and an initial state, and returns the current state and a dispatch function.
