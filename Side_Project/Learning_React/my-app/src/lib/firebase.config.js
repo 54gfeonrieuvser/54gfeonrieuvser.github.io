@@ -1,19 +1,35 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
+import { getAuth} from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA-KIs58o6iYJjFn3Q5q68sL4OxIVFQooY",
-  authDomain: "refirestock.firebaseapp.com",
-  projectId: "refirestock",
-  storageBucket: "refirestock.appspot.com",
-  messagingSenderId: "1042959581706",
-  appId: "1:1042959581706:web:588672d44af236b9aad5f3"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId:process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId:process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
-const app = () => {
-    return initializeApp(firebaseConfig);
-}
+const app = initializeApp(firebaseConfig)
+export const db = getFirestore(app);
+export const auth = getAuth(app)
+export const storage = getStorage(app);
+
+
+/* try {
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Access a property or method of the `auth` object to confirm it's set up correctly
+  console.log("Firebase Authentication initialized successfully");
+  console.log("Current user:", auth.currentUser);
+} catch (error) {
+  console.error("Firebase Authentication initialization error:", error);
+} */

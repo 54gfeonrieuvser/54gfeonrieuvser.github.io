@@ -86,39 +86,39 @@ Implement the following functions within the Firestore SDK:
 
 ```javascript 
 writeDoc: (...args) => {
-    const [inputs, collection_name] = args;
-    return new Promise(async resolve => {
-        const randomIndex = Math.floor(Math.random() * 100000000);
-        try {
-            const docRef = doc(db, "stocks", `${randomIndex}`);
-            await setDoc(docRef, {
-                title: inputs.title,
-                path: inputs.path,
-                createAt: serverTimestamp()
-            });
-            resolve("New document inserted successfully!");
-        } catch (e) {
-            // Handle error
-        }
-    });
-}
+        const [inputs, collection_name] = args;
+        return new Promise(async resolve => {
+            const randomIndex = Math.floor(Math.random() * 100000000);
+            try {
+                const docRef = doc(db, collection_name, `${randomIndex}`);
+                await setDoc(docRef, {
+                    title: inputs.title,
+                    path: inputs.path,
+                    createdAt: serverTimestamp()
+                });
+                resolve("New document inserted successfully!");
+            } catch (e) {
+                // Handle error
+            }
+        });
+    }
 readDocs: (...args) => {
-    const [collection_name] = args;
-    let docs = [];
-    const ref = collection(db, collection_name);
-    return new Promise(async resolve => {
-        try {
-            const snapshots = await getDocs(ref);
-            snapshots.forEach(doc => {
-                const d = { ...doc.data() };
-                docs.push(d);
-            });
-            resolve(docs);
-        } catch (e) {
-            console.log(e);
-        }
-    });
-}`` 
+        const [collection_name] = args;
+        let docs = [];
+        const ref = collection(db, collection_name);
+        return new Promise(async resolve => {
+            try {
+                const snapshots = await getDocs(ref);
+                snapshots.forEach(doc => {
+                    const d = { ...doc.data() };
+                    docs.push(d);
+                });
+                resolve(docs);
+            } catch (e) {
+                console.log(e);
+            }
+        });
+    } 
 ```
 ### Step 4: Perform Database Operations
 ```javascript
@@ -138,11 +138,12 @@ In your `.env` file, define your environment variables with the `REACT_APP_` pre
 
 To access these static variables within your React components, you can use `process.env.REACT_APP_` followed by the variable name. For instance, to access the API key defined above, you would use:
 
-`const apiKey = process.env.REACT_APP_API_KEY;//veryImportantInfo` 
+`const apiKey = process.env.REACT_APP_API_KEY; // veryImportantInfo` 
 
-Remember that the `REACT_APP_` prefix is required for the environment variables to be recognized in your React app.
+### Hints
+- Remember that the `REACT_APP_` prefix is required for the environment variables to be recognized in your React app.
 
-By using environment variables and the `.env` file, you can keep sensitive information separate from your codebase and easily manage different configurations for different environments (e.g., development, production).
+- By using environment variables and the `.env` file, you can keep sensitive information separate from your codebase and easily manage different configurations for different environments (e.g., development, production).
 
-Please note that you'll need to restart your development server (e.g., using `npm start`) for the changes in the `.env` file to take effect.
+- Please note that you'll need to restart your development server (e.g., using `npm start`) for the changes in the `.env` file to take effect.
 

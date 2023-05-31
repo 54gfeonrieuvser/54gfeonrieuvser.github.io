@@ -1,8 +1,16 @@
 import { useMemo, useContext } from "react"
-import { Context} from "../context/context"
+import { Context } from "../context/FirestoreContext"
+import FireStore from "../handlers/firestore"
+import Storage from "../handlers/storage"
+import { useAuthContext } from "../context/AuthContext"
+
+const { uploadFile, downloadFile } = Storage
+const { writeDoc } = FireStore
+
 const Preview = () => {
-  const {state} = useContext(Context)
-  const {inputs} = state
+  const { state } = useContext(Context)
+  const { currentUser} = useAuthContext()
+  const { inputs } = state
   return (
     inputs.path && <div
       className="rounded p-1 m-5"
@@ -16,20 +24,32 @@ const Preview = () => {
   );
 };
 
-const UploadForm = ( ) => {
-  const {state, dispatch, toggle} = useContext(Context)
+const UploadForm = () => {
+  const { currentUser} = useAuthContext()
+  const { state, dispatch, toggle, read } = useContext(Context)
+  const { inputs } = state
+  const username = useMemo(()=> {
+    return  currentUser?.displayName.split(" ").join()
+  }, [currentUser])
   const handleOnChange = (e) => {
-      dispatch({type:'setInputs', payload:{value : e}})
+    dispatch({ type: 'setInputs', payload: { value: e } })
   }
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    dispatch({type:'setItem'})
-    dispatch({type:'collapse', payload:{bool:false}})
+    uploadFile(state.inputs)
+      .then(downloadFile)
+      .then(url => {
+        writeDoc({...inputs, path: url, user: username.toLowerCase()}, "stocks")
+          .then(() => {
+            read()
+            dispatch({ type: 'collapse', payload: { bool: false } })
+          });
+      });
   }
 
   const isDisabled = useMemo(() => {
-    return !!Object.values(state.inputs).some(input => !input)
-  }, [state.inputs])
+    return !!Object.values(inputs).some(input => !input)
+  }, [inputs])
 
   return state.isCollapsed && (
     <>
