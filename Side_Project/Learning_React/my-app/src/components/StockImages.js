@@ -1,6 +1,5 @@
 import List from "./List"
 import { useMemo } from "react"
-import { Context } from "../context/FirestoreContext"
 import { useAuthContext } from "../context/AuthContext";
 import { useFirestoreContext } from "../context/FirestoreContext";
 const StockImages = () => {

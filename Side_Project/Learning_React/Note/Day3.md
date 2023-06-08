@@ -2,7 +2,7 @@
 
 ## Cloud Storage
 
-To learn how to implement Storage (provided by Google) in your React.js app, follow these steps:
+To learn how to implement Storage (provided by Google Firebase) in your React.js app, follow these steps:
 
 ### Step 1: Go to Storage page, set up, and choose stored location
 

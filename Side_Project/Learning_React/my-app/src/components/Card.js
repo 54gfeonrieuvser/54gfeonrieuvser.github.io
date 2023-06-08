@@ -1,5 +1,5 @@
 import { useMemo } from "react"
-import { useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 function Card({ path, title, createdAt, user, id }) {
 
@@ -13,8 +13,8 @@ function Card({ path, title, createdAt, user, id }) {
         return `${date[1]} ${date[2]} ${date[3]}`
     }, [])
     return (
-        <div className="mb-5" onClick={handleOnClick}>
-            <div className="card" style={{ width: "18rem" }}>
+        <div className="mb-5" >
+            <div className="card" onClick={handleOnClick} style={{ width: "18rem" }}>
                 <div style={{
                     height: "220px",
                     backgroundImage: `url(${path})`,

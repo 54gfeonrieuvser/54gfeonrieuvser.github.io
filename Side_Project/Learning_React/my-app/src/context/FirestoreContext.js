@@ -70,8 +70,9 @@ const Provider = ({ children }) => {
         dispatch({type: 'setItems', payload: { items: state.placeholders }})
       }
      /*  let list = state.placeholder.flat() */
-      let list = Array.isArray(state.placeholders) ? state.placeholders.flat() : [];
-      let results = list.filter(item => {
+     /*  let list = Array.isArray(state.placeholders) ? state.placeholders.flat() : [];
+      debugger */
+      let results = state.placeholders.filter(item => {
         const name = item.title.toLowerCase()
         const searchInput = input.toLowerCase()
         return name.indexOf(searchInput) > -1
