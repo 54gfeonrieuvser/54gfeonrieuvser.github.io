@@ -2,7 +2,7 @@
 
 <h2>ver1</h2>
 
-[demo here](https://54gfeonrieuvser.github.io/Side_Project/AJAX_Dog_app/ver1(2020)/)
+[demo here]([https://54gfeonrieuvser.github.io/Side_Project/AJAX_Dog_app/ver1(2020)/](https://54gfeonrieuvser.github.io/Side_Project/frontendmaster-assignments/AJAX-dog-app/ver2(2020)/))
 
 first practice on AJAX, loading image has some bugs
 1. initial image is not set.
@@ -10,6 +10,6 @@ first practice on AJAX, loading image has some bugs
 
 <h2>ver1</h2>
 
-[demo here](https://54gfeonrieuvser.github.io/Side_Project/AJAX_Dog_app/ver2(2023)/)
+[demo here]([https://54gfeonrieuvser.github.io/Side_Project/AJAX_Dog_app/ver2(2023)/](https://54gfeonrieuvser.github.io/Side_Project/frontendmaster-assignments/AJAX-dog-app/ver2(2023)/))
 1. add bonus feature on drop down menu for species
 2. wait to make the page more fancy.
