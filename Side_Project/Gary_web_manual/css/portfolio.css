@@ -60,6 +60,11 @@ body header > nav ul li a:hover {
 body header > nav ul li a:active {
   text-decoration: none;
 }
+body header > nav ul li .unclickable {
+  color: #999999;
+  pointer-events: none;
+  cursor: default;
+}
 body .demo.first {
   margin-bottom: 3rem;
 }
