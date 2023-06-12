@@ -95,30 +95,149 @@ body header > nav ul li a:hover {
 body header > nav ul li a:active {
   text-decoration: none;
 }
-body .intro {
-  position: relative;
-  height: 110vh;
+body header > nav ul li .unclickable {
+  color: #999999;
+  pointer-events: none;
+  cursor: default;
 }
-body .intro::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+body .intro {
+  height: 110vh;
+  font-family: sans-serif;
+  /* &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(237, 237, 234);
+     // background-image: url("../images/水族箱-removebg.png");
+      background-position: center;
+      background-size: 2100px 1500px;
+      background-repeat: no-repeat;
+      filter: blur(5px);
+
+    }
+     */
+}
+body .intro .wrapper {
+  height: 110%;
   width: 100%;
-  height: 100%;
-  background: rgb(237, 237, 234);
-  background-image: url("../images/水族箱-removebg.png");
-  background-position: center;
-  background-size: 2100px 1500px;
-  background-repeat: no-repeat;
-  filter: blur(5px);
-  z-index: -1;
+  background: linear-gradient(180deg, #04fafd, 5%, #119dff, 50%, #030423);
+  position: absolute;
+}
+body .intro .wrapper div {
+  height: 60px;
+  width: 60px;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  animation: 4s linear infinite;
+}
+body .intro div .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 20%;
+  right: 20%;
+}
+body .intro .wrapper div:nth-child(1) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+body .intro .wrapper div:nth-child(2) {
+  top: 60%;
+  left: 80%;
+  animation: animate 10s linear infinite;
+}
+body .intro .wrapper div:nth-child(3) {
+  top: 40%;
+  left: 40%;
+  animation: animate 3s linear infinite;
+}
+body .intro .wrapper div:nth-child(4) {
+  top: 66%;
+  left: 30%;
+  animation: animate 7s linear infinite;
+}
+body .intro .wrapper div:nth-child(5) {
+  top: 90%;
+  left: 10%;
+  animation: animate 9s linear infinite;
+}
+body .intro .wrapper div:nth-child(6) {
+  top: 30%;
+  left: 60%;
+  animation: animate 5s linear infinite;
+}
+body .intro .wrapper div:nth-child(7) {
+  top: 70%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+body .intro .wrapper div:nth-child(8) {
+  top: 75%;
+  left: 60%;
+  animation: animate 10s linear infinite;
+}
+body .intro .wrapper div:nth-child(9) {
+  top: 50%;
+  left: 50%;
+  animation: animate 6s linear infinite;
+}
+body .intro .wrapper div:nth-child(10) {
+  top: 45%;
+  left: 20%;
+  animation: animate 10s linear infinite;
+}
+body .intro .wrapper div:nth-child(11) {
+  top: 10%;
+  left: 90%;
+  animation: animate 9s linear infinite;
+}
+body .intro .wrapper div:nth-child(12) {
+  top: 20%;
+  left: 70%;
+  animation: animate 7s linear infinite;
+}
+body .intro .wrapper div:nth-child(13) {
+  top: 20%;
+  left: 20%;
+  animation: animate 8s linear infinite;
+}
+body .intro .wrapper div:nth-child(14) {
+  top: 60%;
+  left: 5%;
+  animation: animate 6s linear infinite;
+}
+body .intro .wrapper div:nth-child(15) {
+  top: 90%;
+  left: 80%;
+  animation: animate 9s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: scale(0) translateY(0) rotate(70deg);
+  }
+  100% {
+    transform: scale(1.3) translateY(-100px) rotate(360deg);
+  }
 }
 body .intro h2 {
-  margin: 0;
-  padding: 4rem 0 0;
-  text-align: center;
-  font-size: 6rem;
+  top: 100%;
+  left: 100%;
+  position: absolute;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 888;
 }
 body .intro .intro-wrapper {
   /*   background-color:#00b4ff; */
@@ -126,7 +245,7 @@ body .intro .intro-wrapper {
   flex-flow: row nowrap;
 }
 body .intro .intro-wrapper .introCard {
-  /*       border: 3px solid red; */
+  font-family: "Sedgwick Ave Display", cursive;
   flex-basis: 50%;
   padding: 120px 4.5rem;
   font-size: 3.5rem;
@@ -178,10 +297,8 @@ body .intro .intro-wrapper .introCard .cardFlip .backCard {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #D1913C;
   /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFD194, #D1913C);
+  background: linear-gradient(to top, #209cff 0%, #68e0cf 100%);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body .intro .intro-wrapper .introCard .cardFlip .backCard .brief p:first-child {
@@ -338,7 +455,9 @@ body .intro .intro-wrapper .introCarousel {
 body .intro .intro-wrapper .introCarousel .swiper {
   width: 900px;
   height: 600px;
-  border: 0px solid green;
+  /* 
+                     border: 4px solid green;
+  */
 }
 body .intro .intro-wrapper .introCarousel .swiper .swiper-wrapper .swiper-slide {
   display: flex;

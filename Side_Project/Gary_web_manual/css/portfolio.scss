@@ -16,49 +16,33 @@ body {
     //make a back to top button
     margin: 0;
     padding: 0;
-    #backToTopAnchor {
-        position: fixed;
-        height: 100px;
-        width: 100px;
-        background-color: rgb(20, 163, 140);
-        border-radius: 50px;
-        right: 40px;
-        bottom: 35px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        a {
-            font-size: 3rem;
-            color: white;
-            &:link {
-                text-decoration: none;
-            }
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
+
     header {
         height: 100vh;
         background-image: url("../images/首頁背景.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+
         >nav {
             flex-basis: 75%;
             height: 10vh;
+
             ul {
                 list-style-type: none;
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: end;
                 margin: 0;
+
                 li {
                     margin-right: 4rem;
                     padding: 5px;
+
                     &:last-child {
                         margin-right: 10rem;
                     }
+
                     a {
                         font-size: 2.5rem;
                         display: block;
@@ -102,24 +86,50 @@ body {
             line-height: 100vh - $demopag1height;
             border: 0px solid green;
         }
+
         .swiper {
-            border: 0px solid red;
+            width: 1200px;
             height: 800px;
+
             .swiper-slide {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                img {
-                    max-width: 1440px;
-                    max-height: 840px;
+                a {
+                    text-decoration: none;
+                    &:link, &:visited, &:active {
+                        color: black
+                    }
+                }
+                h3 {
+                    font-size: 5rem;
+                }
+                .doggo {
+                    background-image: url("../images/dogDemo.jpg");
+                }
+                .calc {
+                    background-image: url("../images/Calculator.jpg");
+                }
+                .mole {
+                    background-image: url("../images/Mole.jpg");
+                }
+                .gallery {
+                    background-image: url("../images/Gallery.jpg");
+                }
+                div{
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;  
                 }
             }
+
+            img {}
         }
+
+        margin-bottom:3rem;
     }
-    .demo.second{
-        height:100vh;
-        border: 3px solid black;
-    }
+
 }
 
 

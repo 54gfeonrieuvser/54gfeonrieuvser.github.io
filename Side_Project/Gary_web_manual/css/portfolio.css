@@ -13,28 +13,6 @@ body {
   margin: 0;
   padding: 0;
 }
-body #backToTopAnchor {
-  position: fixed;
-  height: 100px;
-  width: 100px;
-  background-color: rgb(20, 163, 140);
-  border-radius: 50px;
-  right: 40px;
-  bottom: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #backToTopAnchor a {
-  font-size: 3rem;
-  color: white;
-}
-body #backToTopAnchor a:link {
-  text-decoration: none;
-}
-body #backToTopAnchor a:hover {
-  text-decoration: underline;
-}
 body header {
   height: 100vh;
   background-image: url("../images/首頁背景.png");
@@ -82,6 +60,9 @@ body header > nav ul li a:hover {
 body header > nav ul li a:active {
   text-decoration: none;
 }
+body .demo.first {
+  margin-bottom: 3rem;
+}
 body .demo.first h2 {
   text-align: center;
   font-weight: 900;
@@ -93,23 +74,39 @@ body .demo.first h2 {
   border: 0px solid green;
 }
 body .demo.first .swiper {
-  border: 0px solid red;
+  width: 1200px;
   height: 800px;
 }
-body .demo.first .swiper .swiper-slide {
+body .demo.first .swiper .swiper-slide a {
+  text-decoration: none;
+}
+body .demo.first .swiper .swiper-slide a:link, body .demo.first .swiper .swiper-slide a:visited, body .demo.first .swiper .swiper-slide a:active {
+  color: black;
+}
+body .demo.first .swiper .swiper-slide h3 {
+  font-size: 5rem;
+}
+body .demo.first .swiper .swiper-slide .doggo {
+  background-image: url("../images/dogDemo.jpg");
+}
+body .demo.first .swiper .swiper-slide .calc {
+  background-image: url("../images/Calculator.jpg");
+}
+body .demo.first .swiper .swiper-slide .mole {
+  background-image: url("../images/Mole.jpg");
+}
+body .demo.first .swiper .swiper-slide .gallery {
+  background-image: url("../images/Gallery.jpg");
+}
+body .demo.first .swiper .swiper-slide div {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body .demo.first .swiper .swiper-slide img {
-  max-width: 1440px;
-  max-height: 840px;
-}
-body .demo.second {
-  height: 100vh;
-  border: 3px solid black;
-}
-
 .disabled {
   display: none;
 }/*# sourceMappingURL=portfolio.css.map */

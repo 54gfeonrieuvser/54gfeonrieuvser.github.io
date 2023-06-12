@@ -58,27 +58,25 @@ Top.addEventListener('mouseover', function (e) {
     Top.style.backgroundColor = "#569DAA";
 });
  */
-const swiper = new Swiper('.demo', {
+
+const swiper = new Swiper('.swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    speed: 400,
-   /*  effect: 'cards', */
-    loop: "true",
+  
     // If we need pagination
- /*    pagination: {
-        el: '.swiper-pagination',
+    pagination: {
+      el: '.swiper-pagination',
     },
- */
+  
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-
+  
     // And if we need scrollbar
-  /*   scrollbar: {
-        el: '.swiper-scrollbar',
-    }, */
-});
-
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
